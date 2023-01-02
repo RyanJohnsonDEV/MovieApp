@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Muvee</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="title"><i class="fa-solid fa-video"></i> Muvee</h1>
+      <form id="form">
+        <input
+          type="search"
+          id="search"
+          class="search"
+          placeholder="Search..."
+        />
+      </form>
+    </header>
+    <div class="container">
+      <div class="sort-container">
+        <div class="reset-container">
+          <div class="reset">Reset Search</div>
+        </div>
+        <div class="buttons-container">
+          <div class="parent">Sort</div>
+          <div class="sort pop active" id="pop">Popularity</div>
+          <div class="sort rel" id="rel">Release Date</div>
+          <div class="sort rat" id="rat">Rating</div>
+        </div>
+      </div>
+      <main id="main"></main>
+      <div class="pages">
+        <div class="pageEl page-left">
+          <i class="fa-solid fa-left-long"></i>
+        </div>
+        <div class="pagesText">Page 1</div>
+        <div class="pageEl page-right pageActive">
+          <i class="fa-solid fa-right-long"></i>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
