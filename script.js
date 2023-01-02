@@ -29,6 +29,12 @@ function updatePage() {
   pagesText.textContent = `Page ${pageNum}`;
 }
 
+function resetPage() {
+  pageNum = 1;
+  updatePage();
+  pageL.classList.remove("pageActive");
+}
+
 pageR.addEventListener("click", function () {
   if (pageR.classList.contains("pageActive")) {
     pageNum += 1;
@@ -68,8 +74,7 @@ function resetAll() {
   sortContainer.style.display = "flex";
   reset.style.display = "none";
   voteCount = "";
-  pageNum = 1;
-  updatePage();
+  resetPage();
   applyActive(sortPop);
   getAPI_URL();
   getMovies(API_URL);
@@ -137,8 +142,7 @@ function startSearch() {
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
-  pageNum = 1;
-  updatePage();
+  resetPage();
   startSearch();
 });
 
@@ -177,20 +181,17 @@ function applyActive(el) {
 }
 
 sortPop.addEventListener("click", function () {
-  pageNum = 1;
-  updatePage();
+  resetPage();
   applyActive(sortPop);
   sort("pop");
 });
 sortRel.addEventListener("click", function () {
-  pageNum = 1;
-  updatePage();
+  resetPage();
   applyActive(sortRel);
   sort("rel");
 });
 sortRat.addEventListener("click", function () {
-  pageNum = 1;
-  updatePage();
+  resetPage();
   applyActive(sortRat);
   sort("rat");
 });
