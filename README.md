@@ -15,6 +15,7 @@ This website utilizes TheMovieDB API and allows users to search for movies, see 
 ## Features
 
 - Sorting based on Popularity, Release Date, or Rating
+- View movie descriptions on hover
 - Pagination to endlessly view movies
 - Asynchronous loading 
 - Responsive design for both Mobile and PC
